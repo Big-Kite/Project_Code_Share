@@ -1,0 +1,6 @@
+INT|STRING|STRING|INT|INT|INT|INT|INT
+Key|FieldName|BattleName|SpawnNormal|SpawnHard|Boss|GroupMin|GroupMax
+1|BG_Set1|BG_Set1b|10|16|10|1|9
+2|BG_Set2|BG_Set2b|12|17|20|11|19
+3|BG_Set3|BG_Set3b|12|20|30|21|29
+4|BG_Set4|BG_Set4b|14|22|40|31|39
