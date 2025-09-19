@@ -1,0 +1,2 @@
+C:\Users\SOL\Desktop\Projects\projectT\ExcelConvert\SourceCode\XlsxToCsvConvert\x64\Debug\xlntd.dll
+C:\Users\SOL\Desktop\Projects\projectT\ExcelConvert\SourceCode\XlsxToCsvConvert\XlsxToCsvConvert\x64\Debug\XlsxToCs.AD24D29E.Up2Date
