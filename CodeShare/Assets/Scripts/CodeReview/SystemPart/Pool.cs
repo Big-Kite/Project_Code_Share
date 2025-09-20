@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class Pool : MonoBehaviour
 {
+    // 풀링할 오브젝트들을 배열로 세팅하고 해당 오브젝트별로 리스트화 시켜서 생성/재사용합니다.
+    // 기본 게임오브젝트 게터와 템플릿으로 바로 타입화하여 리턴시켜주기도 합니다.
+
     [SerializeField] GameObject[] prefabs; // 풀링 대상 프리펩
     List<GameObject>[] pools; // 풀링된 실제 오브젝트
 

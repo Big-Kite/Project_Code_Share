@@ -19,8 +19,8 @@ public class JoyStickController : MonoBehaviour
 
     void Start()
     {
-        var safeArea = FindObjectsByType<SafeAreaImage>(FindObjectsSortMode.None).FirstOrDefault();
-        var canvas = safeArea.GetComponentInParent<Canvas>();
+        //var safeArea = FindObjectsByType<SafeAreaImage>(FindObjectsSortMode.None).FirstOrDefault();
+        var canvas = GetComponentInParent<Canvas>();
         if(canvas != null)
         {
             attachedCanvas = canvas;

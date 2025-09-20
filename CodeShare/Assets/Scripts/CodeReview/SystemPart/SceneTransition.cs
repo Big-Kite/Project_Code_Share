@@ -8,6 +8,10 @@ using UnityEngine.UI;
 
 public class SceneTransition : Singleton<SceneTransition>
 {
+    // 프로젝트 상황에 맞게 로드할 에이싱크핸들을 여유있게 멤버로 가지고 있습니다.
+    // 로드중인 핸들과 유휴상태의 핸들을 번갈아가며 어드레서블 로드로 씬을 로드/릴리즈 처리합니다.
+    // 로드중에는 외부 호출을 막는 기능과 해당 클래스에서 딤드를 깔아주는 역할도 합니다.
+
     AsyncOperationHandle<SceneInstance> handleA;
     AsyncOperationHandle<SceneInstance> handleB;
 
