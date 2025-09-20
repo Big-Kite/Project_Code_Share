@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class BattleFSMController : IDisposable
 {
+    // 캐릭터 FSM을 컨트롤 하는 클래스입니다. 각 상태에 맞는 구현된 스테이트 클래스를 멤버로 가지고 있고
+    // 캐릭터 클래스에서 상태전이에 대한 함수호출을 받으면 기존 상태와 신규 상태를 출, 입하며 전이시킵니다.
     IBattleState currentState;
 
     BattleUnit master;

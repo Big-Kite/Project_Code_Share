@@ -7,6 +7,11 @@ public interface IBattleState
     public void Exit(); // 상태를 종료할 때 호출
     public Vector3 GetDirection();
 }
+
+// 각 스테이트는 인터페이스를 상속받아 다형성을 유지합니다.
+// 상태 전이를 일으키면서 시작점, 업데이트, 마무리를 각 상태에 맞게 로직을 짰습니다.
+// 또 인터페이스를 바로 상속받기에 제한이 많아 베이스부모를 만들어 한단계 더 아래 자식으로 스테이트가 구성되어있습니다.
+
 public abstract class BattleBaseState : IBattleState
 {
     protected BattleFSMController fsmCtrl = null;
