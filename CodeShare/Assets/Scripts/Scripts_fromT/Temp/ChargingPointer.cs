@@ -5,7 +5,7 @@ public class ChargingPointer : MonoBehaviour
     RectTransform pointerRect;
     Animator anim;
 
-    float fallSpeed = 0.0001f; // 낙하 속도
+    float fallSpeed = 0.0001f; // 낙하 속도 // 이거도 디파인값 삭제해서 값없음
     float PullSpeed = 0.0001f; // 미는 속도
 
     float maxX = 0.0f;

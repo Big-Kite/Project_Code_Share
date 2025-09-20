@@ -20,9 +20,9 @@ public class ChargingTargetRect : MonoBehaviour
     
     int dir = 0; // -1 왼쪽 0 머뭄 1 오른쪽
     float moveSpeed = 250.0f; // 속도
-    float stateyTime = 0.0f; // 움직인 후 머무는 시간
+    float stayTime = 0.0f; // 움직인 후 머무는 시간
 
-    float maxWidth = 0.0001f;
+    float maxWidth = 0.0001f; // 원래 디파인 값 있었는데 삭제해서 값 없음 
     float minWidth = 0.0001f;
     float height = 100.0f;
 
@@ -78,13 +78,13 @@ public class ChargingTargetRect : MonoBehaviour
         //    else if (dir > 0)
         //        dirRight.SetActive(true);
         //}
-        stateyTime = Random.Range(0.3f, 1.0f);
+        stayTime = Random.Range(0.3f, 1.0f);
     }
     void SetMoveState(float _delta)
     {
-        stateyTime -= _delta;
+        stayTime -= _delta;
 
-        if (stateyTime <= 0.0f)
+        if (stayTime <= 0.0f)
             SwitchState();
     }
     void Move(float _delta)
@@ -98,8 +98,8 @@ public class ChargingTargetRect : MonoBehaviour
         pos.x = Mathf.Clamp(pos.x, -maxX, maxX);
         targetRect.anchoredPosition = pos;
 
-        stateyTime -= _delta;
-        if (stateyTime <= 0.0f)
+        stayTime -= _delta;
+        if (stayTime <= 0.0f)
             SwitchState();
     }
     public bool IsPointerInTarget(float _x, float _delta)
