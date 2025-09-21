@@ -6,17 +6,21 @@
 - 루트 아래 'CodeShare'폴더에서 게임파일과 관련된 코드 스크립트를 확인해 보실 수 있습니다.
 - 원본 리포의 작업 내용 일부를 공유하는 리포이기 때문에 상세 설명은 생략됩니다.
 - 해당 리포는 앞으로 개발자의 작업물을 지속적으로, 주기적으로 업로드할 예정입니다.
+- 상황에 따라 리포 공개여부가 일시적 변경될 수 있고, 일부 스크립트 누락으로 솔루션은 오류일 수 있습니다.
 
 ## PreView ScreenShot
 <p float="left">
-  <img src="PreView/Proj1_Title.png" width="200">
-  <img src="PreView/Proj1_Equip.png" width="200">
-  <img src="PreView/Proj1_Lobby.png" width="200">
-  <img src="PreView/Proj1_Field.png" width="200">
+  <img src="PreView/Proj1_Title.png" width="240">
+  <img src="PreView/Proj1_Equip.png" width="240">
+  <img src="PreView/Proj1_Lobby.png" width="240">
 </p>
 <p float="left">
-  <img src="PreView/Proj1_Battle1.png" width="200">
-  <img src="PreView/Proj1_Battle2.png" width="200">
-  <img src="PreView/Proj1_Battle3.png" width="200">
-  <img src="PreView/Proj1_Result.png" width="200">
+  <img src="PreView/Proj1_Field.png" width="240">
+  <img src="PreView/Proj1_Battle1.png" width="240">
+  <img src="PreView/Proj1_Battle2.png" width="240">
+</p>
+<p float="left">
+  <img src="PreView/Proj1_Battle3.png" width="240">
+  <img src="PreView/Proj1_Battle4.png" width="240">
+  <img src="PreView/Proj1_Result.png" width="240">
 </p>
