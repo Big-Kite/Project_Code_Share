@@ -59,6 +59,7 @@
     <type fullname="ShieldAttack" preserve="all" />
     <type fullname="SkillManager" preserve="all" />
     <type fullname="SkillSlot" preserve="all" />
+    <type fullname="SoundManager" preserve="all" />
     <type fullname="StageDataSO" preserve="all" />
     <type fullname="StageDB" preserve="all" />
     <type fullname="SwordStrike" preserve="all" />
