@@ -6,5 +6,9 @@
 - 원본 리포의 작업 내용 일부를 공유하는 리포이기 때문에 상세 설명은 생략됩니다.
 - 해당 리포는 앞으로 개발자의 작업물을 지속적으로, 주기적으로 업로드할 예정입니다.
 
-## PreView
-이미지 첨부
+## PreView ScreenShot
+<p float="left">
+  <img src="PreView/Proj1_Title.png" width="200">
+  <img src="PreView/Proj1_Equip.png" width="200">
+  <img src="PreView/Proj1_Lobby.png" width="200">
+</p>
