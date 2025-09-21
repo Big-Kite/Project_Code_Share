@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class DropItem : MonoBehaviour
 {
+    // 드랍아이템마다 가중치가 있고, 몬스터마다 가지고 있는 목록의 가중치합에서 난수가 위치하는 범위 구간의 드랍아이템을 생성합니다.
+
     [SerializeField] SpriteRenderer itemIcon;
 
     public void Init(int _npcKey)
