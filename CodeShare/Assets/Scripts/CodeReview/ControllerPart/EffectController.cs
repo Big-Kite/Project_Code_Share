@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class EffectController : Singleton<EffectController>
 {
+    // 코루틴을 이용하여 이펙트오브젝트를 풀링으로 가져와 연출시간동안 활성화 시킨 후 비활성으로 복구시키는 형태입니다.
+
     [SerializeField] Camera cam;
     [SerializeField] Pool effectPool;
     [SerializeField] Material[] materials;

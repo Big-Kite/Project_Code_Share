@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class TitleController : MonoBehaviour
 {
+    // 게임 실행이 되면 타이틀화면에서 게임에 필요한 필수 오브젝트를 미리 로드 시키고,
+    // 로드가 완료되면 타이틀화면의 버튼을 활성화 시켜 다음 씬으로 넘어가 안정성을 확보했습니다.
     [SerializeField] Button enterButton;
 
     readonly string[] loadKeyMap = { "ScriptableData/DataRef.prefab", "UI/PopupManager.prefab" };

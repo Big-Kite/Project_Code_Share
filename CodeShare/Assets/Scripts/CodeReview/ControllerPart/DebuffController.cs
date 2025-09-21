@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DebuffController : MonoBehaviour
 {
+    // 디버프 종류별 파생 클래스를 팩토리 패턴으로 생성하여 딕셔너리에 가지고 있습니다.
+    // 업데이트를 돌며 완료된 디버프는 삭제 컨테이너에 넣어두고 삭제 시키는 형태입니다.
     Dictionary<DebuffType, Debuff> debuffs = new Dictionary<DebuffType, Debuff>();
     HashSet<DebuffType> toRemove = new HashSet<DebuffType>();
 

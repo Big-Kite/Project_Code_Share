@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 
 public class JoyStickController : MonoBehaviour
 {
+    // 스크린의 터치 좌표를 해당 컨트롤러 부모 캔버스를 참조해 값을 가져와 조이스틱 UI를 핸들링하는 시각표현을 했습니다.
+
     [SerializeField] RectTransform body;
     [SerializeField] RectTransform handle;
 
