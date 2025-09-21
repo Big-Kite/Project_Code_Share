@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class BattleUnit : MonoBehaviour
 {
+    // 배틀씬에 스폰되는 플레이어와 NPC 모두 유닛 개별 FSM으로 돌아가는 오브젝트입니다.
+    // 그래서 베이스 클래스로 만든 클래스로, FSM뿐 아니라 체력, 디버프, 애니메이션 실행, 탐색 등 공통적인 컨트롤과 추상 함수를 가지고 있습니다.
     [SerializeField] protected Transform physicalLayer;
     [SerializeField] Transform front;
 

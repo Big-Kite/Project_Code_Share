@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerInBattle : BattleUnit
 {
+    //플레이어가 컨트롤하는 로직이 씬마다 다르기 때문에 씬에 맞는 로직별 플레이어 컨트롤러입니다.
     [SerializeField] LayerMask targetLayer;
     RaycastHit2D[] targets = null;
 

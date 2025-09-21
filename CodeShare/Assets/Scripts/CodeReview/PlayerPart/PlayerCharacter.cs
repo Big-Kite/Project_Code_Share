@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class PlayerCharacter : Singleton<PlayerCharacter>
 {
+    // 제작된 캐릭터 리소스가 파츠 애니메이션을 실행하는 형태로, 그에 맞게 캐릭터 파츠 컨트롤을 할 수 있게 구성했습니다.
+    // 리소스 최초 의도는 클래스 체인지로 통짜 교체였는데, 파츠로 나뉘어진 리소스를 탈부착이 가능하게 변경하였습니다.
+
     [SerializeField] SpriteRenderer weapon;
     [SerializeField] SpriteRenderer shield;
     [SerializeField] SpriteRenderer helmet;

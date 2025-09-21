@@ -25,6 +25,10 @@ public class PlayerDataSaveModel
 
 public class PlayerData : Singleton<PlayerData>
 {
+    // 유저가 저장해야할 플레이어 정보를 관리하는 클래스입니다.
+    // 세이브 모델 클래스라는 파일에 데이터 수치를 저장시킬 수 있게 시리얼라이즈되는 형태로 래핑클래스를 만들었습니다.
+    // 고정형은 배열, 가변형은 딕셔너리를 사용하여 관리합니다.
+
     // 체력 값
     public int Hp { get; private set; } = 5000;
     public int Mp { get; private set; } = 10;
