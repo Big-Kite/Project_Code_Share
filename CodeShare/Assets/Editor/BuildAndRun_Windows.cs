@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -35,11 +36,32 @@ public class BuildAndRun_Windows : EditorWindow
     }
     static void PerformWin64Build(int playerCount)
     {
-        EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Standalone, BuildTarget.StandaloneWindows);
+        string originalDefines = PlayerSettings.GetScriptingDefineSymbols(UnityEditor.Build.NamedBuildTarget.Standalone);
+        string modifiedDefines = originalDefines;
 
-        for (int i = 1; i <= playerCount; i++)
+        // QA 심볼 제거
+        if (modifiedDefines.Contains("QA"))
         {
-            BuildPipeline.BuildPlayer(GetScenePaths(), "Builds/Win32/" + GetProjectName() + i.ToString() + "/" + GetProjectName() + i.ToString() + ".exe", BuildTarget.StandaloneWindows, BuildOptions.AutoRunPlayer);
+            var defineList = modifiedDefines.Split(';').ToList();
+            defineList.RemoveAll(d => d == "QA");
+            modifiedDefines = string.Join(";", defineList);
+            PlayerSettings.SetScriptingDefineSymbols(UnityEditor.Build.NamedBuildTarget.Standalone, modifiedDefines);
+            Debug.Log("[Build] QA 심볼 제거");
+        }
+
+        try
+        {
+            EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Standalone, BuildTarget.StandaloneWindows);
+
+            for (int i = 1; i <= playerCount; i++)
+            {
+                BuildPipeline.BuildPlayer(GetScenePaths(), "Builds/Win32/" + GetProjectName() + i.ToString() + "/" + GetProjectName() + "_" + i.ToString() + ".exe", BuildTarget.StandaloneWindows, BuildOptions.AutoRunPlayer);
+            }
+        }
+        finally
+        {
+            PlayerSettings.SetScriptingDefineSymbols(UnityEditor.Build.NamedBuildTarget.Standalone, originalDefines);
+            Debug.Log("[Build] QA 심볼 복원");
         }
     }
     static string GetProjectName()
